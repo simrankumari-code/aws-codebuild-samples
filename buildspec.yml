@@ -13,4 +13,4 @@ phases:
       - echo "Running Integration Tests"
       - pytest tests/test_integration.py
       - echo "Running Load Test"
-      - locust --headless -u 5 -r 1 -t10s -H https://jsonplaceholder.typicode.com
+      - locust tests/locustfile.py --headless -u 5 -r 1 -t 10s -H https://jsonplaceholder.typicode.com
